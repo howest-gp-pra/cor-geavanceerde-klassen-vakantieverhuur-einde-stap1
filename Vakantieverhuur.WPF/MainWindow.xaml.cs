@@ -73,6 +73,33 @@ namespace Vakantieverhuur.WPF
 
         }
 
+        private void BtnView_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstVerblijven.SelectedIndex == -1) return;
+            winVerblijven venster = new winVerblijven();
+            venster.situatie = "view";
+            venster.verblijf = (Verblijf)lstVerblijven.SelectedItem;
+            venster.ShowDialog();
+        }
 
+        private void BtnNew_Click(object sender, RoutedEventArgs e)
+        {
+            winVerblijven venster = new winVerblijven();
+            venster.situatie = "new";
+            venster.verblijf = null;
+            venster.ShowDialog();
+
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstVerblijven.SelectedIndex == -1) return;
+
+            winVerblijven venster = new winVerblijven();
+            venster.situatie = "edit";
+            venster.verblijf = (Verblijf)lstVerblijven.SelectedItem;
+            venster.ShowDialog();
+
+        }
     }
 }

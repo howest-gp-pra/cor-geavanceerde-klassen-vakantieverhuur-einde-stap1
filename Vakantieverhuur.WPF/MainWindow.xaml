@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vakantieverhuur.WPF"
         mc:Ignorable="d"
-        Title="Vakantieverblijven" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Vakantieverblijven" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <GroupBox Header="Verblijven" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="271">
             <Grid>
@@ -15,9 +15,10 @@
                     <ComboBoxItem Content="Vakantiehuisjes"/>
                     <ComboBoxItem Content="Caravans"/>
                 </ComboBox>
-                <Button Content="New" HorizontalAlignment="Left" Height="25" Margin="11,10,0,0" VerticalAlignment="Top" Width="56"/>
-                <Button Content="Edit" HorizontalAlignment="Left" Height="25" Margin="72,10,0,0" VerticalAlignment="Top" Width="56"/>
-                <Button Content="Delete" HorizontalAlignment="Left" Height="25" Margin="133,10,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.348,0.446"/>
+                <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Height="25" Margin="71,10,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.25,0.64" Click="BtnNew_Click"/>
+                <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Height="25" Margin="132,10,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.304,0.56" Click="BtnEdit_Click"/>
+                <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="25" Margin="193,10,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.348,0.446"/>
+                <Button x:Name="btnView" Content="View" HorizontalAlignment="Left" Height="25" Margin="11,10,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="1.348,0.446" Click="BtnView_Click"/>
 
             </Grid>
         </GroupBox>
